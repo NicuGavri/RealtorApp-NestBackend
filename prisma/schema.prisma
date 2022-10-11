@@ -46,7 +46,7 @@ model Image {
   id         Int      @id @default(autoincrement())
   url        String
   home_id    Int
-  home       Home     @relation(fields: [home_id], references: [id])
+  home       Home     @relation(fields: [home_id], references: [id], onDelete: Cascade)
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 }
