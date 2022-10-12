@@ -120,3 +120,9 @@ export class UpdateHomeDto {
   propertyType?: PropertyType;
  
 }
+
+export class InquireDto {
+  @IsString()
+  @IsNotEmpty()
+  message: string
+}
